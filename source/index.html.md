@@ -123,7 +123,8 @@ Para criar uma transação que utilizará cartão de crédito, é necessário en
     "terminalId": "<id>",
     "value": "<value>",
     "installments": "<installments>",
-    "callbackUrl": "<url>"
+    "callbackUrl": "<url>",
+    "clientName": "<name>"
   }
 }
 ```
@@ -137,6 +138,7 @@ Para criar uma transação que utilizará cartão de crédito, é necessário en
 |`installments`|Número|Não|Número de parcelas|
 |`paymentBrand`|Texto|Não|Bandeira do cartão (para lista consulte [tabela de valores](#tabela-de-valores)).|
 |`callbackUrl`|Texto|Não|URL de retorno com os dados da transação após processamento.|
+|`clientName`|Texto|Não|Nome do cliente ao qual a transação pertence. Apesar de não obrigatório, sugere-se fortemente que esse parâmetro seja preenchido.|
 
 
 ### Resposta
