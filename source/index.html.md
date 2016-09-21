@@ -132,7 +132,7 @@ Para criar uma transação que utilizará cartão de crédito, é necessário en
 |Propriedade|Tipo|Obrigatório|Descrição|
 |-----------|----|-----------|---------|
 |`merchantId`|Texto|Sim|Identificador da clínica ou profissional.|
-|`terminalId`|Texto|Sim|Terminal da clínica a receber a transação para aprovação.|
+|`terminalId`|Texto|Não|Terminal da clínica a receber a transação para aprovação.|
 |`value`|Número|Sim|Valor do orçamento (ser enviado em centavos).|
 |`installments`|Número|Não|Número de parcelas|
 |`paymentBrand`|Texto|Não|Bandeira do cartão (para lista consulte [tabela de valores](#tabela-de-valores)).|
@@ -141,7 +141,15 @@ Para criar uma transação que utilizará cartão de crédito, é necessário en
 
 ### Resposta
 
-**Em caso de sucesso**, retorna Status 200.
+**Em caso de sucesso**, retorna Status 200 e o id da transação criada.
+
+```json
+{
+  "success": "true",
+  "error": "",
+  "transactionId": "NTIzNQ*3"
+}
+```
 
 <aside class="notice">Veja a seção <a href="#erros">Erros</a> para as respostas de requisições com erros.</aside>
 
